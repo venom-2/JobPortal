@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Posts</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Job Posts</h1>
+    </header>
+    
+    <div class="main-content">
+      <div class="form-container">
+        <h2>Add a New Post</h2>
+        <form id="postForm">
+          <div class="form-group">
+            <label for="profile">Profile</label>
+            <input type="text" id="profile" name="profile" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desc">Description</label>
+            <textarea id="desc" name="desc" rows="4" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="exp">Experience (Years)</label>
+            <input type="number" id="exp" name="exp" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="techs">Technologies (comma separated)</label>
+            <input type="text" id="techs" name="techs" required>
+          </div>
+          
+          <button type="submit">Add Post</button>
+        </form>
+      </div>
+      
+      <div class="search-container">
+        <h2>Search Posts</h2>
+        <input type="text" id="searchBar" placeholder="Search by technology...">
+      </div>
+      
+      <div class="posts-container">
+        <h2>All Posts</h2>
+        <div id="posts"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
