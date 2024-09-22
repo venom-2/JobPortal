@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and display all posts
     const fetchPosts = async (searchQuery = '') => {
       const url = searchQuery 
-        ? `http://localhost:8080/api/fetch/posts/${searchQuery}` 
-        : 'http://localhost:8080/api/fetch/posts';
+        ? `https://job-portal-spring-boot-application.onrender.com/api/fetch/posts/${searchQuery}` 
+        : 'https://job-portal-spring-boot-application.onrender.com/api/fetch/posts';
       const response = await fetch(url);
       const posts = await response.json();
       displayPosts(posts);
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tech: formData.get('techs').split(',').map(tech => tech.trim())
       };
   
-      await fetch('http://localhost:8080/api/add/post', {
+      await fetch('https://job-portal-spring-boot-application.onrender.com/api/add/post', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(postData)
