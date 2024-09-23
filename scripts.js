@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(postForm);
       const postData = {
         profile: formData.get('profile'),
-        desc: formData.get('desc'),
+        desc: formData.get('des'),
         exp: parseInt(formData.get('exp')),
         tech: formData.get('techs').split(',').map(tech => tech.trim())
       };
